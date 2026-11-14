@@ -25,7 +25,7 @@ The goal of this project is to autonomously detect an empty parking bay using ca
     │          ▼                                                  │
     │   ┌───────────────────────┐                                 │
     │   │      PERCEPTION       │                                 │
-    │   │       Kiesse          │                                 │
+    │   │                       │                                 │
     │   │                       │                                 │
     │   │  • Image acquisition  │                                 │
     │   │  • Parking bay        │                                 │
@@ -37,7 +37,7 @@ The goal of this project is to autonomously detect an empty parking bay using ca
     │               ▼                                             │
     │   ┌───────────────────────┐                                 │
     │   │       PLANNING        │                                 │
-    │   │       Julian          │                                 │
+    │   │                       │                                 │
     │   │                       │                                 │
     │   │  • Trajectory         │                                 │
     │   │    generation         │                                 │
@@ -50,7 +50,7 @@ The goal of this project is to autonomously detect an empty parking bay using ca
     │               ▼                                             │
     │   ┌───────────────────────┐                                 │
     │   │    MOTION CONTROL     │                                 │
-    │   │       Ibrahim         │                                 │
+    │   │                       │                                 │
     │   │                       │                                 │
     │   │  • Differential drive │                                 │
     │   │    mapping            │                                 │
