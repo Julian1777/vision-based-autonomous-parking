@@ -1,0 +1,55 @@
+% state vector consists of [x, y, theta, v, ang_vel]
+% x pos, y pos, theta angle, velocity, angular vel (yaw_rate)
+
+% control vector linear accel and angular accel (change in yaw rate) [a,
+% ang_a]
+
+
+% ode ordinary differential equation
+function output = robot_ode(state, control)
+
+    % State variables
+    x     = state(1);
+    y     = state(2);
+    theta = state(3);
+    v     = state(4);
+    omega = state(5);
+
+    % Control inputs
+    a     = control(1);
+    alpha = control(2);
+
+    % Differential drive equations
+    dx     = v * cos(theta);
+    dy     = v * sin(theta);
+    dtheta = omega;
+    dv     = a;
+    domega = alpha;
+
+    % State derivatives
+    dstatedt = [dx; dy; dtheta; dv; domega];
+
+end
+
+function next_state = rf4k_step(state, control, dt)
+    % k1: Estimate the initial slope
+
+    k1 = robot_ode(state, control);
+
+    % k2: Estimate the slope at the midpoint using k1
+
+    k2 = robot_ode(state + (dt/2) * k1, control);
+
+    % k3: Improve the midpoint estimate using k2
+
+    k3 = robot_ode(state + (dt/2) * k2, control);
+
+    % k4: Estimate the slope at the endpoint using k3
+
+    k4 = robot_ode(state + dt * k3, control);
+
+    % Calculate the next state using RK4 weighted average
+
+    next_state = state + (dt/6) * (k1 + 2*k2 + 2*k3 + k4);
+
+end
