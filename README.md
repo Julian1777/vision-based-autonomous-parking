@@ -13,6 +13,62 @@ The goal of this project is to autonomously detect an empty parking bay using ca
 
 ---
 
+# Autonomous Box Parking — Roadmap
+
+## 1. System Setup
+- [ ] Establish MATLAB project structure and shared Git repository.
+- [ ] Define module interfaces, data structures, and coordinate frames.
+- [ ] Establish MATLAB-to-robot communication.
+- [ ] Build the physical parking bay and configure the camera.
+
+## 2. Perception
+- [ ] Calibrate camera and determine intrinsic/extrinsic parameters.
+- [ ] Implement image undistortion and Bird's-Eye View transformation.
+- [ ] Detect parking bay boundaries and extract four corners.
+- [ ] Transform pixel coordinates into robot/world coordinates.
+- [ ] Calculate target parking position and orientation.
+- [ ] Implement temporal filtering for stable detection.
+- [ ] Implement optional CNN/U-Net-based detection and occupancy classification.
+
+## 3. Planning & MPC
+- [ ] Implement smooth reference path generation between initial and target poses.
+- [ ] Develop the four-state kinematic robot model.
+- [ ] Implement MPC prediction model, cost function, and constraints.
+- [ ] Generate velocity and angular velocity control commands.
+- [ ] Build MATLAB/Simulink simulation environment.
+- [ ] Tune MPC parameters and validate different parking approaches.
+- [ ] Optimize real-time execution and implement optional dynamic replanning.
+
+## 4. Motion Control
+- [ ] Configure motors, encoders, and determine robot parameters.
+- [ ] Implement differential-drive inverse kinematics.
+- [ ] Implement encoder-based robot odometry.
+- [ ] Develop and tune independent PI/PID wheel velocity controllers.
+- [ ] Implement PWM control, anti-windup, and feedforward compensation.
+- [ ] Provide continuous robot state feedback to MPC.
+
+## 5. System Integration
+- [ ] Connect Perception, Planning/MPC, and Motion Control.
+- [ ] Integrate all modules into a master MATLAB control loop.
+- [ ] Validate coordinate frames, communication, and data flow.
+- [ ] Verify real-time execution and closed-loop feedback.
+- [ ] Test complete autonomous parking operation.
+
+## 6. Testing & Validation
+- [ ] Perform physical parking trials from different initial positions and orientations.
+- [ ] Evaluate parking accuracy, trajectory tracking, and heading error.
+- [ ] Analyze perception stability and controller performance.
+- [ ] Tune system parameters based on physical test results.
+- [ ] Validate repeatability and reliability of autonomous parking.
+
+## 7. Documentation & Deliverables
+- [ ] Compile experimental results and performance plots.
+- [ ] Document system architecture and module implementations.
+- [ ] Prepare final technical report.
+- [ ] Prepare final presentation.
+
+---
+
 ## System Architecture
 
     ┌─────────────────────────────────────────────────────────────┐
