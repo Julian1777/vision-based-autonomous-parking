@@ -16,10 +16,10 @@ The goal of this project is to autonomously detect an empty parking bay using ca
 # Autonomous Box Parking — Roadmap
 
 ## 1. System Setup
-- [ ] Establish MATLAB project structure and shared Git repository.
+- [x] Establish MATLAB project structure and shared Git repository.
 - [ ] Define module interfaces, data structures, and coordinate frames.
 - [ ] Establish MATLAB-to-robot communication.
-- [ ] Build the physical parking bay and configure the camera.
+- [x] Build the physical parking bay and configure the camera.
 
 ## 2. Perception
 - [ ] Calibrate camera and determine intrinsic/extrinsic parameters.
@@ -32,8 +32,8 @@ The goal of this project is to autonomously detect an empty parking bay using ca
 
 ## 3. Planning & MPC
 - [ ] Implement smooth reference path generation between initial and target poses.
-- [ ] Develop the four-state kinematic robot model.
-- [ ] Implement MPC prediction model, cost function, and constraints.
+- [x] Develop the four-state kinematic robot model.
+- [x] Implement MPC prediction model, cost function, and constraints.
 - [ ] Generate velocity and angular velocity control commands.
 - [ ] Build MATLAB/Simulink simulation environment.
 - [ ] Tune MPC parameters and validate different parking approaches.
