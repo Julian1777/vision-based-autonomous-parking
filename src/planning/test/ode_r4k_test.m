@@ -18,9 +18,9 @@ addpath(planning_dir);
 
 dt = 0.1;
 
-% Initial state [x, y, theta, v, omega]
+% Initial state [x, y, v, theta, omega]
 
-state = [0.0; 0.0; 15.0; 0.0; 0.0];
+state = [0.0; 0.0; 0.0; 15.0; 0.0];
 
 % Control inputs [a, alpha]
 

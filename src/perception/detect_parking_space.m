@@ -1,1 +1,1 @@
-%test
+%returns 4 coordinates, one of each corner of the parking space, as well as the heading

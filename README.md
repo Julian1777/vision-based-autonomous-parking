@@ -31,10 +31,10 @@ The goal of this project is to autonomously detect an empty parking bay using ca
 - [ ] Implement optional CNN/U-Net-based detection and occupancy classification.
 
 ## 3. Planning & MPC
-- [ ] Implement smooth reference path generation between initial and target poses.
+- [x] Implement smooth reference path generation between initial and target poses.
 - [x] Develop the four-state kinematic robot model.
 - [x] Implement MPC prediction model, cost function, and constraints.
-- [ ] Generate velocity and angular velocity control commands.
+- [x] Generate velocity and angular velocity control commands.
 - [ ] Build MATLAB/Simulink simulation environment.
 - [ ] Tune MPC parameters and validate different parking approaches.
 - [ ] Optimize real-time execution and implement optional dynamic replanning.

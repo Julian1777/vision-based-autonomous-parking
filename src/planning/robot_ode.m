@@ -1,5 +1,5 @@
-% state vector consists of [x, y, theta, v, ang_vel]
-% x pos, y pos, theta angle, velocity, angular vel (yaw_rate)
+% State vector: [x, y, v, theta, omega]
+% Position, linear velocity, heading, and angular velocity.
 
 % control vector linear accel and angular accel (change in yaw rate) [a,
 % ang_a]
@@ -11,8 +11,8 @@ function output = robot_ode(state, control)
     % State variables
     x     = state(1);
     y     = state(2);
-    theta = state(3);
-    v     = state(4);
+    v     = state(3);
+    theta = state(4);
     omega = state(5);
 
     % Control inputs
@@ -27,6 +27,6 @@ function output = robot_ode(state, control)
     domega = alpha;
 
     % State derivatives
-    output = [dx; dy; dtheta; dv; domega];
+    output = [dx; dy; dv; dtheta; domega];
 
 end
